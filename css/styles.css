@@ -1,6 +1,7 @@
 :root {
     --primary-text-color: #757575;
     --title-text-color: #212121;
+    --part-title-color: #000000;
     --primary-white-color: #FFFFFF;
     --accent-text-color: #2196F3;
     --background-color: #2F303A;
@@ -12,60 +13,58 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--primary-text-color);
-    font-weight: 400;
 }
 
 .list {
     list-style: none;
 }
-
-/* Header */
-.page{
-    background: var(--primary-white-color);
+.link {
+    text-decoration: none;
 }
-/* лого */
-.logo-link{
-    color: #000000;
-    font-family: 'Raleway';
+/* ----------header--------- */
+/* ----------------logo----------- */
+.header-logo-link{
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    letter-spacing: 0.03em;
-    text-decoration: none;
+    letter-spacing: 0.03em; 
+    color: var(--part-title-color);
 }
-.logo-part{
+.header-logo-part{
+ color: var(--accent-text-color);
+}
+.header-logo-link:hover, .header-logo-link:focus{
     color: var(--accent-text-color);
 }
-/* навігація */
-.link{
-    text-decoration: none;
+/* -----------nav----------- */
+.header-nav-item{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-/* site-nav */
-.site-nav .link{
     color: var(--title-text-color);
 }
-.site-nav .link:hover,
-.site-nav .link:focus {
+.header-nav-item:hover, .header-nav-item:focus{
     color: var(--accent-text-color);
 }
-/* communication */
-.communication .link {
+
+/* ----------communicatuion-list-------- */
+.header-communication-item{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
     color: var(--primary-text-color);
 }
-.communication .link:hover,
-.communication .link:focus {
+
+.header-communication-item:hover, .header-communication-item:focus{
     color: var(--accent-text-color);
 }
 
-
-/* main index */
-/* hero */
+/* ----------hero------------- */
 .hero{
-    background-color: var(--background-color);
+    background-color:var(--background-color);
 }
 .hero-title{
     font-weight: 900;
@@ -76,59 +75,63 @@ body {
     text-transform: uppercase;
     color: var(--primary-white-color);
 }
-
-/* hero-button */
 .hero-button{
     background: var(--accent-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
 }
-.text-button{
+.hero-button:hover, .hero-button:focus{
+    background-color: var(--color-hero-button);
+}
+.text-hero-button{
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.875;
+    line-height: 1.88;
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--primary-white-color);
 }
-.hero-button:hover, .hero-button:focus{
-    background-color: var(--color-hero-button);
-}
+    /* ------benefits------ */
+.benefits-title{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--title-text-color);
+    }
 
-/* переваги */
-.benefits-list .title{
-    font-weight: 700;
+.benefits-text{
     font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-
-    color: var(--title-text-color);
-}
-.text-benefits{
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
-/* Чим ми займаємось */
-.section-title{
+/* -------What we do---------- */
+.work-example-title{
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.17;
+    line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
 }
-
-/* Члени команди */
+/* -------section-members------- */
 .section-members{
-    background: var(--color-section-members);
+    background-color: var(--color-section-members);
 }
-
-.section-members .title{
+.section-members-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+.section-members-name{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -136,22 +139,18 @@ body {
     letter-spacing: 0.03em;
     color: var(--title-text-color);
 }
-
-.section-members .job{
+.section-members-job{
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 1.9;
     text-align: center;
     letter-spacing: 0.03em;
 }
 
-/* footer */
+/* -----------footer----------- */
 .footer{
     background-color: var(--background-color);
-    font-family: 'Roboto';
 }
-
 .logo-footer{
-    text-decoration: none;
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -159,55 +158,59 @@ body {
     letter-spacing: 0.03em;
     color: var(--primary-white-color);
 }
-.footer-name{
+.logo-footer-part{
     color: var(--accent-text-color);
 }
-.footer .link{
+.address-link{
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--primary-white-color);
-}
-
-.footer .link-hue{
-    font-style: normal;
     text-decoration: none;
-    line-height: 1.71;
+}
+.address-link-hue{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;       
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
 }
 
-/* Портфоліо */
-.portfolio .button{
+/* -------------Portfolio-------------- */
+.portfolio-button{
     background: var(--color-section-members);
     border-radius: 4px;
     cursor: pointer;
 }
-.portfolio .text{
+.portfolio-text-button{
+    color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--title-text-color);
 }
-.portfolio .button:hover, .portfolio .button:focus{
+.portfolio-button:hover, .portfolio-button:focus{
     background: var(--accent-text-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
-.portfolio .text:hover, .portfolio .text:focus{
+.portfolio-text-button:hover, .portfolio-text-button:focus{
     color: var(--primary-white-color);
 }
-.portfolio .title{
+.portfolio-title{
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--title-text-color);
 }
-.portfolio .type{
+.portfolio-text{
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
