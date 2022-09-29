@@ -76,10 +76,12 @@ body {
     color: var(--primary-white-color);
 }
 .hero-button{
+    font-family: inherit;
     background: var(--accent-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
+    border-color: transparent;
 }
 .hero-button:hover, .hero-button:focus{
     background-color: var(--color-hero-button);
@@ -94,6 +96,18 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--primary-white-color);
+}
+.visually-hidden{
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
     /* ------benefits------ */
 .benefits-title{
@@ -181,15 +195,33 @@ body {
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
 }
+.logo-footer:hover, .logo-footer:focus{
+    color: var(--accent-text-color);
+}
+
+.address-link:hover, .address-link:focus{
+ color:var(--accent-text-color);
+}
+.address-link-hue:hover,
+.address-link-hue:focus {
+    color: var(--accent-text-color);
+}
+
+/* -----------footer----------- */
+
 
 /* -------------Portfolio-------------- */
+.current{
+    color: var(--accent-text-color);
+}
 .portfolio-button{
+    border-color: transparent;
     background: var(--color-section-members);
     border-radius: 4px;
     cursor: pointer;
 }
 .portfolio-text-button{
-    font-family: 'Roboto';
+    font-family: inherit;
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
